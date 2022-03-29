@@ -12,11 +12,11 @@ buildscript {
 allprojects {
 
     ext {
-        appName = 'RKPD2'
-        appPackageName = 'com.zrp200.rkpd2'
+        appName = 'Still RKPD2'
+        appPackageName = 'com.hahhujanapi.stillrkpd2'
 
-        appVersionCode = 617
-        appVersionName = '0.3.1'
+        appVersionCode = 281
+        appVersionName = '1.0a'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 

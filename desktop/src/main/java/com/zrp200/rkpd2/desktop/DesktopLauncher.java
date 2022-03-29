@@ -82,7 +82,7 @@ public class DesktopLauncher {
 
 				//shorten/simplify exception message to make it easier to fit into a message box
 				exceptionMsg = exceptionMsg.replaceAll("\\(.*:([0-9]*)\\)", "($1)");
-				exceptionMsg = exceptionMsg.replace("com.zrp200.rkpd2.", "");
+				exceptionMsg = exceptionMsg.replace("com.hahhujanapi.stillrkpd2.", "");
 				exceptionMsg = exceptionMsg.replace("com.watabou.", "");
 				exceptionMsg = exceptionMsg.replace("com.badlogic.gdx.", "");
 				exceptionMsg = exceptionMsg.replace("\t", "    ");
@@ -130,14 +130,14 @@ public class DesktopLauncher {
 		String basePath = "";
 		if (SharedLibraryLoader.isWindows) {
 			if (System.getProperties().getProperty("os.name").equals("Windows XP")) {
-				basePath = "Application Data/.zrp200/RKPD2/";
+				basePath = "Application Data/.hahujanapi/Still RKPD2/";
 			} else {
-				basePath = "AppData/Roaming/.zrp200/RKPD2/";
+				basePath = "AppData/Roaming/.hahhujanapi/Still RKPD2/";
 			}
 		} else if (SharedLibraryLoader.isMac) {
-			basePath = "Library/Application Support/RKPD2/";
+			basePath = "Library/Application Support/Still RKPD2/";
 		} else if (SharedLibraryLoader.isLinux) {
-			basePath = ".zrp200/rkpd2/";
+			basePath = ".hahhujanapi/stillrkpd2/";
 		}
 
 		//copy over prefs from old file location from legacy desktop codebase
