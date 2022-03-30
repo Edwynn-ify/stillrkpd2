@@ -80,7 +80,7 @@ public class RingOfMight extends Ring {
 		// if I want to get this working with innate boosts again, then I'll just have to
 		return Messages.get(this, isIdentified()?"stats":"typical_stats",
 				soloBonus(),
-				new DecimalFormat("#.##").format(100f * (Math.pow(1.035, soloBuffedBonus()) - 1f)));
+				new DecimalFormat("#.##").format(100f * (Math.pow(1.05, soloBuffedBonus()) - 1f)));
 	}
 
 	@Override
@@ -93,7 +93,7 @@ public class RingOfMight extends Ring {
 	}
 	
 	public static float HTMultiplier( Char target ){
-		return (float)Math.pow(1.035, getBuffedBonus(target, Might.class));
+		return (float)Math.pow(1.05, getBuffedBonus(target, Might.class));
 	}
 
 	public class Might extends RingBuff {

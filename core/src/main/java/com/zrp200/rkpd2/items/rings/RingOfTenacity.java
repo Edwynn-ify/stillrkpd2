@@ -35,7 +35,7 @@ public class RingOfTenacity extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 0.85f;
+		return 0.80f;
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class RingOfTenacity extends Ring {
 	
 	public static float damageMultiplier( Char t ){
 		//(HT - HP)/HT = heroes current % missing health.
-		return (float)Math.pow(0.85, getBuffedBonus( t, Tenacity.class)*((float)(t.HT - t.HP)/t.HT));
+		return (float)Math.pow(0.8, getBuffedBonus( t, Tenacity.class)*((float)(t.HT - t.HP)/t.HT));
 	}
 
 	public class Tenacity extends RingBuff {

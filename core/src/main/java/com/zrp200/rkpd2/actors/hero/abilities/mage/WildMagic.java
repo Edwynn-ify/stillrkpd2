@@ -171,7 +171,7 @@ public class WildMagic extends ArmorAbility {
 			cur.partialCharge++;
 			cur.curCharges--;
 		}
-		if (!wands.isEmpty() && hero.isAlive()) {
+		if (!wands.isEmpty()) {
 			zapWand(wands, hero, target);
 		} else {
 			if (hero.buff(WildMagicTracker.class) != null) {

@@ -54,21 +54,12 @@ public class PotionOfDragonsBreath extends ExoticPotion {
 		icon = ItemSpriteSheet.Icons.POTION_DRGBREATH;
 	}
 
-	protected static boolean identifiedByUse = false;
-
 	@Override
 	//need to override drink so that time isn't spent right away
 	protected void drink(final Hero hero) {
 		curUser = hero;
-		curItem = detach( hero.belongings.backpack );
-
-		if (!isKnown()) {
-			identify();
-			identifiedByUse = true;
-		} else {
-			identifiedByUse = false;
-		}
-
+		curItem = this;
+		
 		GameScene.selectCell(targeter);
 	}
 	
@@ -83,7 +74,7 @@ public class PotionOfDragonsBreath extends ExoticPotion {
 				return;
 			}
 
-			if (cell == null && identifiedByUse){
+			if (cell == null && !isKnown()){
 				showingWindow = true;
 				GameScene.show( new WndOptions(new ItemSprite(PotionOfDragonsBreath.this),
 						Messages.titleCase(name()),
@@ -96,7 +87,7 @@ public class PotionOfDragonsBreath extends ExoticPotion {
 						switch (index) {
 							case 0:
 								curUser.spendAndNext(1f);
-								identifiedByUse = false;
+								detach(curUser.belongings.backpack);
 								break;
 							case 1:
 								GameScene.selectCell( targeter );
@@ -105,10 +96,8 @@ public class PotionOfDragonsBreath extends ExoticPotion {
 					}
 					public void onBackPressed() {}
 				} );
-			} else if (cell == null && !anonymous){
-				curItem.collect( curUser.belongings.backpack );
 			} else if (cell != null) {
-				identifiedByUse = false;
+				identify();
 				curUser.busy();
 				Sample.INSTANCE.play( Assets.Sounds.DRINK );
 				curUser.sprite.operate(curUser.pos, new Callback() {
@@ -126,7 +115,7 @@ public class PotionOfDragonsBreath extends ExoticPotion {
 						int maxDist = 6;
 						int dist = Math.min(bolt.dist, maxDist);
 
-						final ConeAOE cone = new ConeAOE(bolt, 6, 60, Ballistica.STOP_SOLID | Ballistica.STOP_TARGET | Ballistica.IGNORE_SOFT_SOLID);
+						final ConeAOE cone = new ConeAOE(bolt, 9, 90, Ballistica.STOP_SOLID | Ballistica.STOP_TARGET | Ballistica.IGNORE_SOFT_SOLID);
 
 						//cast to cells at the tip, rather than all cells, better performance.
 						for (Ballistica ray : cone.outerRays){

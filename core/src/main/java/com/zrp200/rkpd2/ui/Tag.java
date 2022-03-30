@@ -34,10 +34,6 @@ public class Tag extends Button {
 	protected NinePatch bg;
 	
 	protected float lightness = 0;
-
-	public static int SIZE = 24;
-
-	protected boolean flipped = false;
 	
 	public Tag( int color ) {
 		super();
@@ -72,9 +68,7 @@ public class Tag extends Button {
 	}
 
 	public void flip(boolean value){
-		flipped = value;
 		bg.flipHorizontal(value);
-		layout();
 	}
 	
 	@Override

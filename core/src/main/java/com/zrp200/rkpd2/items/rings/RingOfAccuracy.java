@@ -35,7 +35,7 @@ public class RingOfAccuracy extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 1.3f;
+		return 1.4f;
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class RingOfAccuracy extends Ring {
 	}
 	
 	public static float accuracyMultiplier( Char target ){
-		return (float)Math.pow(1.3f, getBuffedBonus(target, Accuracy.class));
+		return (float)Math.pow(1.4f, getBuffedBonus(target, Accuracy.class));
 	}
 	
 	public class Accuracy extends RingBuff {

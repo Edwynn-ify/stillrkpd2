@@ -40,13 +40,11 @@ public class DangerIndicator extends Tag {
 	private int enemyIndex = 0;
 	
 	private int lastNumber = -1;
-
-	public static int HEIGHT = 16;
 	
 	public DangerIndicator() {
 		super( 0xFF4C4C );
 		
-		setSize( SIZE, HEIGHT );
+		setSize( 24, 16 );
 		
 		visible = false;
 	}

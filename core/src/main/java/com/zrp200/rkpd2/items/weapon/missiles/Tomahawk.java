@@ -35,7 +35,7 @@ public class Tomahawk extends MissileWeapon {
 		hitSoundPitch = 0.9f;
 
 		tier = 4;
-		baseUses = 5;
+		baseUses = 7;
 	}
 
 	@Override

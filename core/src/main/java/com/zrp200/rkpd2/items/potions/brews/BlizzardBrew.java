@@ -45,7 +45,7 @@ public class BlizzardBrew extends Brew {
 			Sample.INSTANCE.play( Assets.Sounds.GAS );
 		}
 		
-		GameScene.add( Blob.seed( cell, 1000, Blizzard.class ) );
+		GameScene.add( Blob.seed( cell, 1500, Blizzard.class ) );
 	}
 	
 	@Override

@@ -38,7 +38,7 @@ public class FireImbue extends Buff {
 		announced = true;
 	}
 
-	public static final float DURATION	= 50f;
+	public static final float DURATION	= 80f;
 
 	protected float left;
 

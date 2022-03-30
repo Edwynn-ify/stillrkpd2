@@ -46,7 +46,7 @@ public class InfernalBrew extends Brew {
 			Sample.INSTANCE.play( Assets.Sounds.GAS );
 		}
 		
-		GameScene.add( Blob.seed( cell, 1000, Inferno.class ) );
+		GameScene.add( Blob.seed( cell, 1500, Inferno.class ) );
 	}
 	
 	@Override

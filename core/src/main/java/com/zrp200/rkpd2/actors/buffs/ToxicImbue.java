@@ -35,7 +35,7 @@ public class ToxicImbue extends Buff {
 		announced = true;
 	}
 
-	public static final float DURATION	= 50f;
+	public static final float DURATION	= 80f;
 
 	protected float left;
 
@@ -60,7 +60,7 @@ public class ToxicImbue extends Buff {
 
 	@Override
 	public boolean act() {
-		GameScene.add(Blob.seed(target.pos, 50, ToxicGas.class));
+		GameScene.add(Blob.seed(target.pos, 80, ToxicGas.class));
 
 		spend(TICK);
 		left -= TICK;

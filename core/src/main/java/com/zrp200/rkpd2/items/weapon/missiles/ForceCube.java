@@ -43,7 +43,7 @@ public class ForceCube extends MissileWeapon {
 		image = ItemSpriteSheet.FORCE_CUBE;
 		
 		tier = 5;
-		baseUses = 5;
+		baseUses = 7;
 		
 		sticky = false;
 	}

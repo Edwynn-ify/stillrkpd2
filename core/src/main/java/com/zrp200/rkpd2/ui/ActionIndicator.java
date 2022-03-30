@@ -45,7 +45,7 @@ public class ActionIndicator extends Tag {
 
 		instance = this;
 
-		setSize( SIZE, SIZE );
+		setSize( 24, 24 );
 		visible = false;
 	}
 	
@@ -67,9 +67,8 @@ public class ActionIndicator extends Tag {
 		super.layout();
 		
 		if (icon != null){
-			if (!flipped)   icon.x = x + (SIZE - icon.width()) / 2f + 1;
-			else            icon.x = x + width - (SIZE + icon.width()) / 2f - 1;
-			icon.y = y + (height - icon.height()) / 2f;
+			icon.x = x + (width - icon.width()) / 2;
+			icon.y = y + (height - icon.height()) / 2;
 			PixelScene.align(icon);
 			if (!members.contains(icon))
 				add(icon);

@@ -68,7 +68,7 @@ abstract public class MissileWeapon extends Weapon {
 	
 	public static final float MAX_DURABILITY = 100;
 	protected float durability = MAX_DURABILITY;
-	protected float baseUses = 10;
+	protected float baseUses = 15;
 	
 	public boolean holster;
 	
@@ -84,7 +84,7 @@ abstract public class MissileWeapon extends Weapon {
 	
 	@Override
 	public int min(int lvl) {
-		return  2 * tier +                      //base
+		return  3 * tier +                      //base
 				(tier == 1 ? lvl : 2*lvl);      //level scaling
 	}
 	
@@ -95,7 +95,7 @@ abstract public class MissileWeapon extends Weapon {
 	
 	@Override
 	public int max(int lvl) {
-		return  5 * tier +                      //base
+		return  6 * tier +                      //base
 				(tier == 1 ? 2*lvl : tier*lvl); //level scaling
 	}
 	

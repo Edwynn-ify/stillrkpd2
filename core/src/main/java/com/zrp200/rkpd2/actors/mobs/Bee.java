@@ -40,7 +40,7 @@ public class Bee extends Mob {
 	{
 		spriteClass = BeeSprite.class;
 		
-		viewDistance = 4;
+		viewDistance = 5;
 
 		EXP = 0;
 		
@@ -84,7 +84,7 @@ public class Bee extends Mob {
 	public void spawn( int level ) {
 		this.level = level;
 		
-		HT = (2 + level) * 4;
+		HT = (5 + level) * 6;
 		defenseSkill = 9 + level;
 	}
 
@@ -111,7 +111,7 @@ public class Bee extends Mob {
 	
 	@Override
 	public int damageRoll() {
-		return Random.NormalIntRange( HT / 10, HT / 4 );
+		return Random.NormalIntRange( HT / 8, HT / 4 );
 	}
 	
 	@Override

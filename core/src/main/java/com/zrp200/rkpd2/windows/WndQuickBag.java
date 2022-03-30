@@ -59,13 +59,18 @@ public class WndQuickBag extends Window {
 			}
 			if (i instanceof Artifact
 					&& !i.isEquipped(Dungeon.hero)
-					&& (!(i instanceof CloakOfShadows) || !Dungeon.hero.hasTalent(Talent.LIGHT_CLOAK, Talent.RK_FREERUNNER))){
+					&& (!(i instanceof CloakOfShadows) || !Dungeon.hero.hasTalent(Talent.LIGHT_CLOAK))){
 				continue;
 			}
 			items.add(i);
 		}
 
 		Collections.sort(items, quickBagComparator);
+
+		if (items.isEmpty()){
+			hide();
+			return;
+		}
 
 		int btnWidth = 16;
 		int btnHeight = 20;

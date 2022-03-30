@@ -15,7 +15,7 @@ allprojects {
         appName = 'Still RKPD2'
         appPackageName = 'com.hahhujanapi.stillrkpd2'
 
-        appVersionCode = 281
+        appVersionCode = 2810
         appVersionName = '1.0a'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8

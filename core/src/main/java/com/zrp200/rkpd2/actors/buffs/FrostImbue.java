@@ -33,10 +33,10 @@ public class FrostImbue extends FlavourBuff {
 		announced = true;
 	}
 	
-	public static final float DURATION	= 50f;
+	public static final float DURATION	= 80f;
 	
 	public void proc(Char enemy){
-		Buff.affect(enemy, Chill.class, 2f);
+		Buff.affect(enemy, Chill.class, 3f);
 		enemy.sprite.emitter().burst( SnowParticle.FACTORY, 2 );
 	}
 	

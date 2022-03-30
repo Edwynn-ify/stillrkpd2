@@ -34,7 +34,7 @@ public class Shuriken extends MissileWeapon {
 		hitSoundPitch = 1.2f;
 		
 		tier = 2;
-		baseUses = 5;
+		baseUses = 7;
 	}
 	
 	@Override

@@ -60,7 +60,7 @@ public class Bag extends Item implements Iterable<Item> {
 
 		super.execute( hero, action );
 
-		if (action.equals( AC_OPEN ) && !items.isEmpty()) {
+		if (action.equals( AC_OPEN )) {
 			
 			GameScene.show( new WndQuickBag( this ) );
 			

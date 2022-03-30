@@ -55,6 +55,7 @@ public class AlchemicalCatalyst extends Potion {
 		potionChances.put(PotionOfParalyticGas.class,   2f);
 		potionChances.put(PotionOfPurity.class,         2f);
 		potionChances.put(PotionOfExperience.class,     1f);
+		potionChances.put(PotionOfStrength.class,       1f);
 	}
 	
 	@Override

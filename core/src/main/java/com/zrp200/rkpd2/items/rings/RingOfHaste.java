@@ -35,7 +35,7 @@ public class RingOfHaste extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 1.2f;
+		return 1.3f;
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class RingOfHaste extends Ring {
 	}
 	
 	public static float speedMultiplier( Char target ){
-		return (float)Math.pow(1.2, getBuffedBonus(target, Haste.class));
+		return (float)Math.pow(1.3, getBuffedBonus(target, Haste.class));
 	}
 	
 	public class Haste extends RingBuff {

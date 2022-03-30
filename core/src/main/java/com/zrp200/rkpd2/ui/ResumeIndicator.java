@@ -34,7 +34,7 @@ public class ResumeIndicator extends Tag {
 	public ResumeIndicator() {
 		super(0xCDD5C0);
 
-		setSize( SIZE, SIZE );
+		setSize( 24, 24 );
 
 		visible = false;
 
@@ -57,8 +57,7 @@ public class ResumeIndicator extends Tag {
 	protected void layout() {
 		super.layout();
 
-		if (!flipped)   icon.x = x + (SIZE - icon.width()) / 2f + 1;
-		else            icon.x = x + width - (SIZE + icon.width()) / 2f - 1;
+		icon.x = x+1 + (width - icon.width) / 2f;
 		icon.y = y + (height - icon.height) / 2f;
 		PixelScene.align(icon);
 	}

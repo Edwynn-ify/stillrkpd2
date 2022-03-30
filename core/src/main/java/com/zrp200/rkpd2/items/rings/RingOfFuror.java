@@ -35,7 +35,7 @@ public class RingOfFuror extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 1.105f;
+		return 1.125f;
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class RingOfFuror extends Ring {
 	}
 	
 	public static float attackSpeedMultiplier(Char target ){
-		return (float)Math.pow(1.105, getBuffedBonus(target, Furor.class));
+		return (float)Math.pow(1.125, getBuffedBonus(target, Furor.class));
 	}
 
 	public class Furor extends RingBuff {

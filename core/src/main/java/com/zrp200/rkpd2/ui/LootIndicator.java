@@ -37,7 +37,7 @@ public class LootIndicator extends Tag {
 	public LootIndicator() {
 		super( 0x1F75CC );
 		
-		setSize( SIZE, SIZE );
+		setSize( 24, 24 );
 		
 		visible = false;
 	}
@@ -66,10 +66,8 @@ public class LootIndicator extends Tag {
 	@Override
 	protected void layout() {
 		super.layout();
-
-		if (!flipped)   slot.setRect( x + 1, y, SIZE, height );
-		else	        slot.setRect( x + (width() - SIZE) - 1, y, SIZE, height );
-
+		
+		slot.setRect( x + 2, y + 3, width - 3, height - 6 );
 	}
 	
 	@Override

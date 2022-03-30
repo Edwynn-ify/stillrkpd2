@@ -60,7 +60,7 @@ public class RingOfWealth extends Ring {
 	private int dropsToRare = Integer.MIN_VALUE;
 
 	@Override
-	protected float multiplier() { return 1.20f; }
+	protected float multiplier() { return 1.30f; }
 
 	private static final String TRIES_TO_DROP = "tries_to_drop";
 	private static final String DROPS_TO_RARE = "drops_to_rare";
@@ -85,7 +85,7 @@ public class RingOfWealth extends Ring {
 	}
 	
 	public static float dropChanceMultiplier( Char target ){
-		return (float)Math.pow(1.20, getBuffedBonus(target, Wealth.class));
+		return (float)Math.pow(1.30, getBuffedBonus(target, Wealth.class));
 	}
 	
 	public static ArrayList<Item> tryForBonusDrop(Char target, int tries ){

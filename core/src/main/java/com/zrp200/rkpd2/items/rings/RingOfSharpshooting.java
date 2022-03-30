@@ -37,7 +37,7 @@ public class RingOfSharpshooting extends Ring {
 	public String statsInfo() {
 		int level = level();
 		if(!isIdentified()) level(0);
-		String res = Messages.get(this, isIdentified()?"stats":"typical_stats", soloBuffedBonus(), new DecimalFormat("#.##").format(100f * (Math.pow(1.2, soloBonus()) - 1f)));
+		String res = Messages.get(this, isIdentified()?"stats":"typical_stats", soloBuffedBonus(), new DecimalFormat("#.##").format(100f * (Math.pow(1.25, soloBonus()) - 1f)));
 		level(level);
 		return res;
 	}
@@ -52,7 +52,7 @@ public class RingOfSharpshooting extends Ring {
 	}
 	
 	public static float durabilityMultiplier( Char target ){
-		return (float)(Math.pow(1.2, getBonus(target, Aim.class)));
+		return (float)(Math.pow(1.25, getBonus(target, Aim.class)));
 	}
 
 	public class Aim extends RingBuff {

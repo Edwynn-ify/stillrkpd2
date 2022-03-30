@@ -46,7 +46,7 @@ public class RingOfElements extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 0.825f;
+		return 0.8f;
 	}
 
 	@Override
@@ -75,7 +75,7 @@ public class RingOfElements extends Ring {
 		
 		for (Class c : RESISTS){
 			if (c.isAssignableFrom(effect)){
-				return (float)Math.pow(0.825, getBuffedBonus(target, Resistance.class));
+				return (float)Math.pow(0.8, getBuffedBonus(target, Resistance.class));
 			}
 		}
 		

@@ -35,7 +35,7 @@ public class RingOfEvasion extends Ring {
 
 	@Override
 	protected float multiplier() {
-		return 1.15f;
+		return 1.20f;
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class RingOfEvasion extends Ring {
 	}
 	
 	public static float evasionMultiplier( Char target ){
-		return (float) Math.pow( 1.15, getBuffedBonus(target, Evasion.class));
+		return (float) Math.pow( 1.20, getBuffedBonus(target, Evasion.class));
 	}
 
 	public class Evasion extends RingBuff {

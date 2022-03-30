@@ -35,7 +35,7 @@ public class Bolas extends MissileWeapon {
 		hitSoundPitch = 1f;
 		
 		tier = 3;
-		baseUses = 5;
+		baseUses = 7;
 	}
 	
 	@Override

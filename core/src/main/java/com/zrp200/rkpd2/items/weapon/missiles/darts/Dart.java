@@ -79,7 +79,7 @@ public class Dart extends MissileWeapon {
 			return  4 +                    //4 base
 					bow.buffedLvl() + lvl; //+1 per level or bow level
 		} else {
-			return  1 +     //1 base, down from 2
+			return  2 +     //1 base, down from 2 (back to 2 again)
 					lvl;    //scaling unchanged
 		}
 	}
@@ -90,7 +90,7 @@ public class Dart extends MissileWeapon {
 			return  12 +                       //12 base
 					3*bow.buffedLvl() + 2*lvl; //+3 per bow level, +2 per level (default scaling +2)
 		} else {
-			return  2 +     //2 base, down from 5
+			return  3 +     //2 base, down from 5 (increased to 3)
 					2*lvl;  //scaling unchanged
 		}
 	}

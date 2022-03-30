@@ -39,7 +39,7 @@ public class ChillingDart extends TippedDart {
 		if (Dungeon.level.water[defender.pos]){
 			Buff.prolong(defender, Chill.class, Chill.DURATION);
 		} else {
-			Buff.prolong(defender, Chill.class, 6f);
+			Buff.prolong(defender, Chill.class, 10f);
 		}
 		
 		return super.proc(attacker, defender, damage);

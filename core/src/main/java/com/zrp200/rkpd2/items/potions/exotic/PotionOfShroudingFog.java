@@ -50,7 +50,7 @@ public class PotionOfShroudingFog extends ExoticPotion {
 		int centerVolume = 120;
 		for (int i : PathFinder.NEIGHBOURS8){
 			if (!Dungeon.level.solid[cell+i]){
-				GameScene.add( Blob.seed( cell+i, 120, SmokeScreen.class ) );
+				GameScene.add( Blob.seed( cell+i, 180, SmokeScreen.class ) );
 			} else {
 				centerVolume += 120;
 			}

@@ -93,7 +93,7 @@ public class ElixirOfMight extends Elixir {
 		private int left;
 		
 		public void reset(){
-			left = 5;
+			left = 10;
 		}
 		
 		public int boost(){
@@ -101,7 +101,7 @@ public class ElixirOfMight extends Elixir {
 		}
 		
 		public static int boost(int HT){
-			return Math.round(4 + HT/20f);
+			return Math.round(4 + HT/10f);
 		}
 		
 		public void onLevelUp(){

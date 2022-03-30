@@ -37,7 +37,7 @@ public class RingOfEnergy extends Ring {
 		// manual implementation because custom message...
 		int level = level();
 		if(!isIdentified()) level(0);
-		double[] effect = {1.2,1.15};
+		double[] effect = {1.3,1.2};
 		String[] args = new String[2];
 		for(int i=0; i < 2; i++)
 			args[i] = new DecimalFormat("#.##").format(100*(Math.pow(effect[i],soloBuffedBonus())-1));
@@ -51,11 +51,11 @@ public class RingOfEnergy extends Ring {
 	}
 	
 	public static float wandChargeMultiplier( Char target ){
-		return (float)Math.pow(1.20, getBuffedBonus(target, Energy.class));
+		return (float)Math.pow(1.3, getBuffedBonus(target, Energy.class));
 	}
 
 	public static float artifactChargeMultiplier( Char target ){
-		return (float)Math.pow(1.15, getBuffedBonus(target, Energy.class));
+		return (float)Math.pow(1.2, getBuffedBonus(target, Energy.class));
 	}
 	
 	public class Energy extends RingBuff {

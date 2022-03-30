@@ -126,7 +126,7 @@ abstract public class ClassArmor extends Armor {
 		classArmor.masteryPotionBonus = armor.masteryPotionBonus;
 		classArmor.identify();
 
-		classArmor.charge = 50;
+		classArmor.charge = 40;
 		
 		return classArmor;
 	}

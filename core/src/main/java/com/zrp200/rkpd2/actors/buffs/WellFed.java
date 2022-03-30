@@ -42,8 +42,8 @@ public class WellFed extends Buff {
 		if (left < 0){
 			detach();
 			return true;
-		} else if (left % 18 == 0){
-			target.HP = Math.min(target.HT, target.HP + 1);
+		} else if (left % 8 == 0){
+			target.HP = Math.min(target.HT, target.HP + 2);
 		}
 		
 		spend(TICK);
