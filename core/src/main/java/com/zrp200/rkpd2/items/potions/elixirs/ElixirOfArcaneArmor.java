@@ -36,7 +36,7 @@ public class ElixirOfArcaneArmor extends Elixir {
 	
 	@Override
 	public void apply(Hero hero) {
-		Buff.affect(hero, ArcaneArmor.class).set(10 + hero.lvl/2 +, 120);
+		Buff.affect(hero, ArcaneArmor.class).set(10 + hero.lvl/2 , 120);
 	}
 	
 	@Override
