@@ -34,7 +34,7 @@ public class Regeneration extends Buff {
 		actPriority = HERO_PRIO - 1;
 	}
 	
-	private static final float REGENERATION_DELAY = 10;
+	private static final float REGENERATION_DELAY = 5;
 	
 	@Override
 	public boolean act() {

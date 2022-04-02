@@ -39,18 +39,18 @@ public class Blazing extends Weapon.Enchantment {
 	public int proc( Weapon weapon, Char attacker, Char defender, int damage ) {
 		int level = Math.max( 0, weapon.buffedLvl() );
 
-		// lvl 0 - 33%
+		// lvl 0 - 33% (
 		// lvl 1 - 50%
 		// lvl 2 - 60%
-		float procChance = (level+1f)/(level+3f) * procChanceMultiplier(attacker);
+		float procChance = (level+2f)/(level+5f) * procChanceMultiplier(attacker);
 		if (Random.Float() < procChance) {
 			
 			if (defender.buff(Burning.class) != null){
 				Buff.affect(defender, Burning.class).reignite(defender, 8f);
-				int burnDamage = Random.NormalIntRange( 1, 3 + Dungeon.depth/4 );
+				int burnDamage = Random.NormalIntRange( 1, 4 + Dungeon.depth/3 );
 				defender.damage( Math.round(burnDamage * 0.67f), this );
 			} else {
-				Buff.affect(defender, Burning.class).reignite(defender, 8f);
+				Buff.affect(defender, Burning.class).reignite(defender, 12f);
 			}
 			
 			defender.sprite.emitter().burst( FlameParticle.FACTORY, level + 1 );

@@ -41,7 +41,7 @@ public class Elastic extends Weapon.Enchantment {
 		// lvl 0 - 20%
 		// lvl 1 - 33%
 		// lvl 2 - 43%
-		float procChance = (level+1f)/(level+5f) * procChanceMultiplier(attacker);
+		float procChance = (level+2f)/(level+5f) * procChanceMultiplier(attacker);
 		if (Random.Float() < procChance) {
 			//trace a ballistica to our target (which will also extend past them
 			Ballistica trajectory = new Ballistica(attacker.pos, defender.pos, Ballistica.STOP_TARGET);

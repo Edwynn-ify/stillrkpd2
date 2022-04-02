@@ -486,7 +486,7 @@ public enum Talent {
 			// hearty meal heals for (2.5/4)/(4/6). priv heals for (2/3)/(3/5)
 			int boost = talent == HEARTY_MEAL && strength == 1
 					? Random.round(2.5f) // simulate 2.5
-					: (int) Math.ceil( (talent == HEARTY_MEAL ? 2.5 : 2) * Math.pow(1.5,strength-1) );
+					: (int) Math.ceil( (talent == HEARTY_MEAL ? 2.5: 2)* 3 * Math.pow(1.5,strength-1) );
 			heartyMeal[0] += boost;
 			heartyMeal[1] += Math.round(boost*2f/3);
 		}, ROYAL_PRIVILEGE, HEARTY_MEAL);

@@ -118,7 +118,7 @@ public class Kinetic extends Weapon.Enchantment {
 			if (bundle.contains(PRESERVED_DAMAGE)){
 				preservedDamage = bundle.getFloat(PRESERVED_DAMAGE);
 			} else {
-				preservedDamage = cooldown()/10;
+				preservedDamage = cooldown()/15;
 				spend(cooldown());
 			}
 		}

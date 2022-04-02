@@ -39,7 +39,7 @@ public class Corrupting extends Weapon.Enchantment {
 		// lvl 0 - 20%
 		// lvl 1 ~ 23%
 		// lvl 2 ~ 26%
-		float procChance = (level+5f)/(level+25f) * procChanceMultiplier(attacker);
+		float procChance = (level+5f)/(level+13f) * procChanceMultiplier(attacker);
 		if (damage >= defender.HP
 				&& Random.Float() < procChance
 				&& defender instanceof Mob

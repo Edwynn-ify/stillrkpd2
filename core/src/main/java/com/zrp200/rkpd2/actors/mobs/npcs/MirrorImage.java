@@ -34,7 +34,7 @@ import com.watabou.utils.Random;
 public class MirrorImage extends AbstractMirrorImage {
 	
 	{
-		HP = HT = 1;
+		HP = HT = Dungeon.hero.HT/4;
 	}
 
 	

@@ -22,6 +22,7 @@
 package com.zrp200.rkpd2.actors.mobs.npcs;
 
 import com.zrp200.rkpd2.Assets;
+import com.zrp200.rkpd2.Dungeon;
 import com.zrp200.rkpd2.actors.Actor;
 import com.zrp200.rkpd2.actors.Char;
 import com.zrp200.rkpd2.actors.blobs.CorrosiveGas;
@@ -49,7 +50,7 @@ public class PrismaticImage extends AbstractMirrorImage {
 	{
 		spriteClass = PrismaticSprite.class;
 		
-		HP = HT = 10;
+		HP = HT = Dungeon.hero.HT;
 
 		intelligentAlly = true;
 		
@@ -112,15 +113,15 @@ public class PrismaticImage extends AbstractMirrorImage {
 	public void duplicate( Hero hero, int HP ) {
 		duplicate(hero);
 		this.HP = HP;
-		HT = PrismaticGuard.maxHP( hero );
+		HT = Dungeon.hero.HT;
 	}
 	
 	@Override
 	public int damageRoll() {
 		if (hero != null) {
-			return Random.NormalIntRange( 2 + hero.lvl/4, 4 + hero.lvl/2 );
+			return Random.NormalIntRange( 3 + hero.lvl/2, 6 + hero.lvl/2 );
 		} else {
-			return Random.NormalIntRange( 2, 4 );
+			return Random.NormalIntRange( 4, 8 );
 		}
 	}
 

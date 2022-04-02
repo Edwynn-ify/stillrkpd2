@@ -41,10 +41,10 @@ public class Blooming extends Weapon.Enchantment {
 		// lvl 0 - 33%
 		// lvl 1 - 50%
 		// lvl 2 - 60%
-		float procChance = (level+1f)/(level+3f) * procChanceMultiplier(attacker);
+		float procChance = (level+2f)/(level+5f) * procChanceMultiplier(attacker);
 		if (Random.Float() < procChance) {
 			
-			boolean secondPlant = level > Random.Int(10);
+			boolean secondPlant = level > Random.Int(15);
 			if (plantGrass(defender.pos)){
 				if (secondPlant) secondPlant = false;
 				else return damage;

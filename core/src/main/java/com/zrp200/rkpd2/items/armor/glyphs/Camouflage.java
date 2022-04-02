@@ -41,7 +41,7 @@ public class Camouflage extends Armor.Glyph {
 	}
 
 	public static void activate(Char ch, int level){
-		Buff.prolong(ch, Invisibility.class, 3 + level/2);
+		Buff.prolong(ch, Invisibility.class, 5 + level/2);
 		if ( Dungeon.level.heroFOV[ch.pos] ) {
 			Sample.INSTANCE.play( Assets.Sounds.MELD );
 		}
