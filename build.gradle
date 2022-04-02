@@ -16,7 +16,7 @@ allprojects {
         appPackageName = 'com.hahhujanapi.stillrkpd2'
 
         appVersionCode = 2810
-        appVersionName = '1.0a'
+        appVersionName = '1.1a'
 
         appJavaCompatibility = JavaVersion.VERSION_1_8
 
