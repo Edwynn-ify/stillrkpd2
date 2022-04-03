@@ -311,8 +311,8 @@ public class Ghost extends NPC {
 				weapon = (MeleeWeapon) Reflection.newInstance(c.classes[Random.chances(c.probs)]);
 
 				//50%:+0, 30%:+1, 15%:+2, 5%:+3
-				weapon.upgrade(Random.Int(5));
-				armor.upgrade(Random.Int(5
+				weapon.upgrade(Random.Int(6));
+				armor.upgrade(Random.Int(6
 				));
 
 				//10% (20%)to be enchanted. We store it separately so the enchant status isn't revealed early

@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-            storeFile file('C:\\Users\\Zrp200\\Zrp200.jks')
-            storePassword 'palkia'
-            keyAlias 'Zrp200'
-            keyPassword 'palkia'
+            storeFile file('C:\\Users\\HahHujanApi\\HahHujanApi.jks')
+            storePassword 'hahhujanapi'
+            keyAlias 'HahHujanApi'
+            keyPassword 'hahhujanapi'
         }
     }
     compileSdkVersion appAndroidCompileSDK

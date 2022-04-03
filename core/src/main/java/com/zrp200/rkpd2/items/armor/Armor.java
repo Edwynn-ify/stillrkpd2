@@ -520,16 +520,8 @@ public class Armor extends EquipableItem {
 
 	@Override
 	public Item random() {
-		//+0: 75% (3/4)
-		//+1: 20% (4/20)
-		//+2: 5%  (1/20)
-		int n = 0;
-		if (Random.Int(2) == 0) {
-			n++;
-			if (Random.Int(3) == 0) {
-				n++;
-			}
-		}
+
+		int n = Random.Int(6);;
 		level(n);
 		
 		//30% chance to be cursed
