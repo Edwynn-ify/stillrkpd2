@@ -198,7 +198,7 @@ public class Hero extends Char {
 		
 		belongings = new Belongings( this );
 
-		if(DeviceCompat.isDesktop()) {
+		if(DeviceCompat.isDesktop() && DeviceCompat.isDebug()) {
 			// scroll of debug: autocollect, put in last slot as that's least likely to be occupied.
 			ScrollOfDebug debug = new ScrollOfDebug();
 			if(debug.collect(belongings.backpack)) Dungeon.quickslot.setSlot(3, debug);
